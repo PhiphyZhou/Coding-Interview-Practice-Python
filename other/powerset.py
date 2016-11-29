@@ -1,7 +1,6 @@
 # Implement a powerset of a given set S as an array
 # Solution: 
-# recursion to build the filter: recurse from the start to end. filter length = len(S)
-# then apply the filter each time it's built on the array, add the array to the total list
+# recursively add one element to the set, union with the previous powerset.
 
 import copy
 
