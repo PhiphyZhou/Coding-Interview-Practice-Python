@@ -1,9 +1,9 @@
 '''
-A general purpose tree class
+A bounch of tree classes
 '''
 
-class BinaryNode:
-	''' The Node of a binary tree
+class BinarySearchTree:
+	''' The Node of a binary search tree
 	'''
 	def __init__(self, value):
 		self.value = value
@@ -64,11 +64,11 @@ class BinaryNode:
 		self.inorder_traversal(ls)
 		print ls
 		
-btree = BinaryNode(5)
+bst = BinarySearchTree(5)
 for i in [7,4,6,2,8,1,3,9,5]:
-	btree.insert_node(i)
-btree.inorder_print()
-print btree.get_height()
+	bst.insert_node(i)
+bst.inorder_print()
+print bst.get_height()
 	
 	
 	
