@@ -25,13 +25,28 @@ def powerset(s): # implemented as a generator
 		yield i
 		yield i + [s[0]]
 
-	
+def powerset_it(s): # iterative implementation
+	include = [False]*len(s)
+	result = []
+	while(True):
+		print result
+		for i in range(len(s)-1,-2,-1):
+			if i == -1: return 
+			if include[i] == False:
+				include[i] = True
+				result.append(s[i])
+				break
+			include[i] = False
+			result.pop()
+		
+			
 s0 = []
-print list(powerset(s0))
+# print list(powerset(s0))
 s1 = ['a']    
-print list(powerset(s1))
+# print list(powerset(s1))
 s2 = ['a','b']
-print list(powerset(s2))
+# print list(powerset(s2))
 s3 = ['a','b','c']
-print list(powerset(s3))
+# print list(powerset(s3))
 
+powerset_it(s3)
