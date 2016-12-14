@@ -1,4 +1,7 @@
-# Crack-Coding-Interview-in-Python
-Implementation of selected problems in the book Cracking The Coding Interview in Python.
+# Coding-Interview-Practice-Python
 
-The version of the book I used is version 5. 
+This repository contains my coding interview practice in Python. Problems are from various sources including:
+- Cracking the Coding Interview (Version 5)
+- [LeetCode](https://www.google.com)
+
+
