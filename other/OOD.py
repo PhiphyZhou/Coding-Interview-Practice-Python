@@ -20,7 +20,7 @@ class Rectangle(Shape):
 	temp = 1
 	def __init__(self, center, w, h):
 		super(Rectangle,self).__init__(center)
-		self.w = w
+		self.w = w + temp
 		self.h = h
 	def get_bounds(self):
 		return self
@@ -78,10 +78,8 @@ class Third(object):
 # 		print("that's it")
 	pass
  
-print Third.__mro__
-Third()
-
-
+# print Third.__mro__
+# Third()
 
 
 
