@@ -20,7 +20,7 @@ class Rectangle(Shape):
 	temp = 1
 	def __init__(self, center, w, h):
 		super(Rectangle,self).__init__(center)
-		self.w = w + temp
+		self.w = w + self.temp
 		self.h = h
 	def get_bounds(self):
 		return self
@@ -48,16 +48,25 @@ class Ellipse(Shape):
 		pass
 		
 class Point(object):
+	__slots__ = ['x','y']
 	def __init__(self,x,y):
 		self.x = x
 		self.y = y
 		
-# rec = Rectangle(Point(1,2), 1, 2)
-# print rec.get_width()
-# print Rectangle.temp
-# rec1 = type(rec)(Point(2,3),1,1)
-# print type(rec1)
-# print rec1.get_height()
+rec = Rectangle(Point(1,2), 1, 2)
+print rec.__dict__
+print rec.get_width()
+print Rectangle.temp
+rec1 = type(rec)(Point(2,3),1,1)
+print type(rec1)
+print rec1.get_height()
+p = Point(1,2)
+# p.bla = p.x * p.y
+# print p.bla
+print p.__dict__
+q = Point(3,4)
+print q.__dict__
+
 
 
 # Multiple inheritance
@@ -80,6 +89,7 @@ class Third(object):
  
 # print Third.__mro__
 # Third()
+
 
 
 
