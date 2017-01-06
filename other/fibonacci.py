@@ -24,7 +24,7 @@ def fibi(n):
 
 mem = {0:0,1:1}
 def fibm(n):
-    ''' recursive using a memory'''
+    ''' recursive using memoization'''
     if n not in mem:
         mem[n] = fibm(n-1)+fibm(n-2)
     return mem[n]
